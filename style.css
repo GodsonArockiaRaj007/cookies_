@@ -160,7 +160,7 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    
 }
 
 #bg-video {
@@ -177,6 +177,7 @@ body {
     
 
 }
+
 
 /* Dark Overlay for Better Text Visibility */
 .overlay {
@@ -305,3 +306,145 @@ height: auto;
     }
   }
   
+
+  .founders {
+    background-image: url('abstract-uv-ultraviolet-light-composition.jpg'); /* Replace 'your-image.jpg' with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Ensures the content stays above the background */
+    z-index: 2; /* Keeps it above the video */
+     /* Adjust padding for spacing */
+}
+
+.team-section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .section-title {
+    margin-bottom: 40px;
+  }
+  
+  .team-member {
+    /* background: black; */
+    border-radius: 8px;
+    
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  @media (max-width: 981px) {
+    .team-member{
+      margin-bottom: 20px;
+    }  
+  }
+ 
+
+  .team-member img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .team-member h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .team-member p {
+    font-size: 14px;
+    color: white;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    margin: 0 5px;
+    font-size: 20px;
+    color: #777;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #0077b5; /* LinkedIn blue color */
+  }
+  
+  
+  .instagram-link {
+    /* color:; Instagram pink color */
+    font-size: 24px; /* Adjust icon size */
+    transition: color 0.3s ease;
+  }
+  
+
+  /* Contact Section Styling */
+.contact-us {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    text-align: left;
+}
+
+.contact-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-links ul li {
+    margin-bottom: 10px;
+}
+
+.contact-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.contact-links ul li a:hover {
+    text-decoration: underline;
+}
+
+//* Center the Social Media Icons */
+.social-media {
+    margin-top: 20px;
+    text-align: center; /* Centers the content */
+}
+
+.social-media p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px; /* Adds spacing between icons */
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
