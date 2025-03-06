@@ -99,10 +99,10 @@ function toggleMenu() {
 
 
 <div class="video-container">
-    <video autoplay muted loop id="bg-video">
+     <video autoplay muted loop id="bg-video">
         <source src="bgvideo.mp4" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
+    </video> 
     <div class="overlay"></div>
     <div class="video-content">  <!-- Changed from "content" to "video-content" -->
         <h1>Connecting the dots. It’s what we do.</h1>
@@ -187,7 +187,57 @@ function toggleMenu() {
     </script>
 </div>
 
-
+<div class="client-scrolling-container">
+<!-- Client Scrolling Section -->
+<div class="container ">
+    <h1 class="text-center mb-4" class=" fs-3" style="color: black; font-size: 2rem; font-weight: bold; text-align: center;">Our Clients</h1>
+    <p>
+        Cookies Tech, founded in 2023 and headquartered in Madurai, is a dynamic technology company committed to innovation and excellence. We specialize in delivering cutting-edge solutions that empower individuals and businesses to embrace the future of technology with confidence.
+    </p>
+    <p>
+        Our mission is to push the boundaries of what's possible in the tech space. With a focus on user-centric design and advanced engineering, we bring unique perspectives to every project. From mobile applications to AI-driven platforms, we strive to deliver products that resonate with modern-day challenges and opportunities.
+    </p> <br><br>
+    <div class="scrolling-client-details">
+      <div class="scrolling-content" id="scrolling-content">
+        <!-- Client items will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+  
+ 
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollingContent = document.getElementById("scrolling-content");
+  
+      const clientItems = [
+        { img: "i1.png", name: "Tech Solutions", desc: "Providing cutting-edge IT services." },
+        { img: "seo.png", name: "SEO Boosters", desc: "Experts in digital marketing & SEO strategies." },
+        { img: "u.jpg", name: "E-Shop Hub", desc: "Innovative e-commerce platform development." }
+      ];
+  
+      function createClientElements() {
+        scrollingContent.innerHTML = "";
+        let fullList = [...clientItems, ...clientItems];
+        fullList.forEach(client => {
+          let clientContainer = document.createElement("div");
+          clientContainer.classList.add("client-container");
+          clientContainer.innerHTML = `
+            <div class="client-logo">
+              <img src="${client.img}" alt="${client.name} Logo">
+            </div>
+            <h5>${client.name}</h5>
+            <p>${client.desc}</p>
+          `;
+          scrollingContent.appendChild(clientContainer);
+        });
+      }
+  
+      createClientElements();
+    });
+  </script>
+  
+</div>
 
 <div class="founders">
 <section id="team" class="team-section" id="founder" >
@@ -208,7 +258,7 @@ function toggleMenu() {
               <a href="https://www.instagram.com/username" target="_blank" class="instagram-link" style="color: #E1306C; text-decoration: none;">
     <i class="fab fa-instagram"></i>
   </a>
-                <a href="https://www.linkedin.com/in/username" target="_blank" class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/username" target="_blank" class="linkedin-link" style="color: #0077b5;"><i class="fab fa-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -224,7 +274,7 @@ function toggleMenu() {
               <a href="https://www.instagram.com/username" target="_blank" class="instagram-link" style="color: #E1306C; text-decoration: none;">
     <i class="fab fa-instagram"></i>
   </a>
-                <a href="https://www.linkedin.com/in/username" target="_blank" class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/username" target="_blank" class="linkedin-link" style="color: #0077b5;"><i class="fab fa-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -241,7 +291,7 @@ function toggleMenu() {
     <i class="fab fa-instagram"></i>
   </a>
   
-                <a href="https://www.linkedin.com/in/username" target="_blank" class="linkedin-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/username" target="_blank" class="linkedin-link" style="color: #0077b5;"><i class="fab fa-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -250,27 +300,28 @@ function toggleMenu() {
     </div>
   </section>
 </div>
+
 <section class="contact-us">
     <div class="container">
         <h2>Let's connect</h2>
         <div class="contact-links">
             <ul>
-                <li><a href="#">Get in touch</a></li>
-                <li><a href="#">Our Products</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Learn about us</a></li>
+                <li><a href="getintouch.html">Get in touch</a></li>
+                <li><a href="ourproduct.html">Our Products</a></li>
+                <li><a href="ourservice.html">Our Services</a></li>
+                <li><a href="learnaboutus.html">Learn about us</a></li>
             </ul>
             <ul>
-                <li><a href="#">Who we are</a></li>
-                <li><a href="#">What we do</a></li>
-                <li><a href="#">Our thinking</a></li>
-                <li><a href="#">Our Clients</a></li>
+                <li><a href="whoweare.html">Who we are</a></li>
+                <li><a href="whatwedo.html">What we do</a></li>
+                <li><a href="ourthinking.html">Our thinking</a></li>
+                <li><a href="ourclients.html">Our Clients</a></li>
             </ul>
             <ul>
-                <li><a href="#">Newsroom</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Press releases</a></li>
-                <li><a href="#">Alumni</a></li>
+                <li><a href="newsroom.html">Newsroom</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="pressrelease.html">Press releases</a></li>
+                <li><a href="alumini.html">Alumni</a></li>
             </ul>
         </div>
 
