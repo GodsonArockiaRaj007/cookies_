@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS Header</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- Bootstrap CDN -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+     <!-- AOS Animation Library -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+     
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="ct.png" alt="Cookies_tech">
+    </div>
+
+    <!-- Hamburger Menu for Mobile -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <div class="menu">
+        <div class="menu-item" onclick="toggleDropdown('what-we-do')">What we do</div>
+        <div class="menu-item" onclick="toggleDropdown('who-we-are')">Who we are</div>
+        <div class="menu-item" onclick="toggleDropdown('insights')">Insights</div>
+        <div class="menu-item" onclick="toggleDropdown('careers')">Careers</div>
+        <div class="menu-item" onclick="toggleDropdown('newsroom')">Newsroom</div>
+        <div class="menu-item" onclick="toggleDropdown('investors')">Investors</div>
+    </div>
+
+    <div class="contact-us">
+        <a href="contact.html">
+            <img src="contact-us.png" alt="Contact Us">
+        </a>
+    </div>
+</nav>
+
+<!-- Sections -->
+<div id="what-we-do" class="content"><h2>What We Do</h2><p>TCS is here to make a difference...</p></div>
+<div id="who-we-are" class="content"><h2>Who We Are</h2><p>We are a global leader in IT services...</p></div>
+<div id="insights" class="content"><h2>Insights</h2><p>Stay up to date with innovations...</p></div>
+<div id="careers" class="content"><h2>Careers</h2><p>Join us and shape the future...</p></div>
+<div id="newsroom" class="content"><h2>Newsroom</h2><p>Latest news and updates...</p></div>
+<div id="investors" class="content"><h2>Investors</h2><p>Investor relations and updates...</p></div>
+
+<!-- JavaScript -->
+<script>
+   function toggleDropdown(sectionId) {
+    let section = document.getElementById(sectionId);
+
+    // If the section is already active, hide it
+    if (section.classList.contains("active")) {
+        section.classList.remove("active");
+    } else {
+        // Hide all sections before showing the clicked one
+        document.querySelectorAll('.content').forEach(sec => sec.classList.remove('active'));
+        section.classList.add("active");
+    }
+}
+
+function toggleMenu() {
+    let menu = document.querySelector(".menu");
+    menu.classList.toggle("show-menu");
+}
+
+    
+</script>
+
+  <!-- Bootstrap CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container1 d-flex align-items-center justify-content-center">
+    <div class="landing-content">
+        <h1 >Welcome to Cookies Tech</h1>
+        <p>
+            Cookies Tech, founded in 2023 and headquartered in Madurai, is a dynamic technology company committed to innovation and excellence. We specialize in delivering cutting-edge solutions that empower individuals and businesses to embrace the future of technology with confidence.
+        </p>
+        <p>
+            Our mission is to push the boundaries of what's possible in the tech space. With a focus on user-centric design and advanced engineering, we bring unique perspectives to every project. From mobile applications to AI-driven platforms, we strive to deliver products that resonate with modern-day challenges and opportunities.
+        </p>
+        <button class="btn btn-primary learn-more">Learn more</button>
+    </div>
+</div>
+
+
+
+<div class="video-container">
+    <video autoplay muted loop id="bg-video">
+        <source src="bgvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="video-content">  <!-- Changed from "content" to "video-content" -->
+        <h1>Connecting the dots. It’s what we do.</h1>
+        <p>
+            Our mission is to push the boundaries of what's possible in the tech space. With a focus on user-centric design and advanced engineering, we bring unique perspectives to every project. From mobile applications to AI-driven platforms, we strive to deliver products that resonate with modern-day challenges and opportunities.
+        </p>   
+    </div>
+</div>
+
+
+
+<div class="product-bg">
+    <!-- Products Section -->
+    <div class="container text-center  products" data-aos="fade-up">
+        <h2 id="product" style="color:white; font-weight: bold;">Our Products</h2>
+        <h3 class="fw-bold" style="color:white">
+            Creating long-term value with entrepreneurial intelligence! <br> Our main goal is...
+        </h3>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row text-center">
+            <!-- Product 1 -->
+            <div class="col-md-4" data-aos="fade-right">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="i1.png" class="img-fluid rounded shadow-sm" alt="Planora App">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Planora is a robust and feature-packed event management app crafted to help users effortlessly plan, organize, and execute various types of events, from intimate birthday parties to grand weddings and large-scale corporate events.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://play.google.com/store/search?q=planora&c=apps&hl=en_IN">
+                    <button class="btn button1 mt-3" style="background-color: black; color: white;">DOWNLOAD</button>
+                </a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="u.jpg" class="img-fluid rounded shadow-sm" alt="Tuto Learning App">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Tuto is an amazing learning app that provides personalized learning with clear, concise, and fun-filled visual content. Just install it on your mobile device and start learning with ease!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn button1 mt-3" style="background-color: black; color: white;">DOWNLOAD</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4" data-aos="fade-left">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="y.jpeg" class="img-fluid rounded shadow-sm" alt="Trade Mart">
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Trade Mart is an app that connects buyers & sellers for easy business transactions. With millions of users, you can expand your business effortlessly.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn mt-3" style="background-color: black; color: white;">DOWNLOAD</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1400, // Animation duration
+            once: true // Ensures animation happens only once
+        });
+    </script>
+</div>
+</body>
+</html>
