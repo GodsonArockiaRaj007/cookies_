@@ -12,11 +12,19 @@ body {
 }
 h1,h2,h3{
   font-size: 2rem;
-  font-family: 'HK Grotesk', sans-serif;
+  font-family: 'Magnolia Script', cursive;
 }
 p{
   font-size: 1.5rem;
-  font-family: 'HK Grotesk', sans-serif;
+  font-family: 'Magnolia Script', cursive;
+}
+html, body {
+  
+  overflow-x: hidden;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
 }
 /* 🔹 Navbar Styling */
 .navbar {
@@ -98,6 +106,9 @@ p{
         text-align: center;
         padding: 10px 0;
     }
+    .logo img {
+margin-left: 10px;
+    }
 
     .menu.show-menu {
         display: flex; 
@@ -114,6 +125,9 @@ p{
         cursor: pointer;
         padding: 10px;
     }
+    .contact-us1 img {
+      left: -10px;
+    }
 }
 
 @media (min-width: 993px) {
@@ -124,406 +138,540 @@ p{
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
 
-
+/* 🔹 Container Styling */
 .container1 {
-    height: 100vh; 
-    /* background: url('abstract-uv-ultraviolet-light-composition.jpg') no-repeat center center/cover;
-    background-position: center; 
-    background-attachment: fixed; */
-    /* padding: 20px; */
-    text-align: center;
-
- 
-    width: 100vw; /* Ensures full width */
-    height: 90vh;
+  height: auto; /* Changed from height: 100vh to min-height */
+  width: 100vw;
+  display: flex;
   
- 
+  padding: 0 0; /* Ensures spacing for content */
+  overflow-x: hidden;
+  
+  padding-top: 5%;
 }
-.container1 h1{
-    color: black;
-    font-size: 2.5rem;
-    font-family: 'Magnolia Script', cursive;
-}
-.container1 p{
-    color: black;
-    font-family: 'Magnolia Script', cursive;
-    font-size: 1.8rem;
-}
+
 /* 🔹 Landing Content */
 .landing-content {
-    width: 100%;
-    text-align: justify;
-    padding-left: 7%;
-    padding-right: 8%;
-    
-    border-radius: 10px;
+  width: 100%;
+  background: transparent;
+  text-align: justify;
+
 }
 
-/* 🔹 Button Styling */
-.learn-more {
-    margin-top: 20px;
-    font-size: 1rem;
+/* 🔹 Text Styling */
+.container1 h1 {
+  color: black;
+  font-size: 2rem;
+  font-family: 'Magnolia Script', cursive;
+  margin-bottom: 5%;
+}
+
+.container1 p {
+  color: black;
+  font-family: 'Magnolia Script', cursive;
+  font-size: 1.5rem;
+  line-height: 2.5;
 }
 
 /* 🔹 Responsive Design */
 @media (max-width: 992px) {
-    .landing-content {
-        width: 80%; /* Adjusts width for medium screens */
-    }
+  .landing-content {
+      width: 90%; /* Adjust width for medium screens */
+  }
 }
 
 @media (max-width: 768px) {
-    .container1 {
-        height: auto; /* Allows content to expand */
-        padding: 50px 20px;
-        width: 100vw;
-        overflow-x: hidden;
-    }
-    .landing-content {
-        width: 100%; /* Takes full width on smaller screens */
-        text-align: justify;
-    }
+  .container1 {
+      min-height: auto; /* Allows content to expand */
+      padding-left: 10%;
+  padding-right: 10%;
+      width: 100vw;
+  }
+
+  .landing-content {
+      
+      text-align: justify;
+  }
+
+  .container1 h1 {
+      font-size: 1.5rem;
+  }
+
+  .container1 p {
+      font-size: 1rem;
+  }
 }
 
+/* Video Container */
 .video-container {
-    position: relative;
-    
-    width: 100vw;
-    height: 90vh;
-    overflow: hidden; 
-    
+  position: relative;
+  width: 100%;
+  min-height: 100vh;  /* Changed from height: 100vh to min-height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5% 0; /* Added padding to ensure space for text */
 }
 
+/* Background Video */
 #bg-video {
-    position: absolute; /* Fixed position to keep it steady */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    object-fit: cover;
-    
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-
-/* Dark Overlay for Better Text Visibility */
+/* Dark Overlay */
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/* Updated Class Name */
+/* Video Content */
 .video-content {
-    position: absolute;
-    top: 45%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    text-align: justify;
-    color: white;
-    width: 100%;
-    padding-left: 7%;
-    padding-right: 8%;
-    /* max-width: 1800px; */
-    z-index: 2;  /* Ensure it appears above the overlay */
+  position: relative; /* Changed from absolute to relative */
+  text-align: center;
+  color: white;
+  width: 100%;
+  /* max-width: 900px; */
+  z-index: 2;
+  padding: 20px;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
+/* Responsive Text */
 .video-content h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    font-family: 'Aprila', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Magnolia Script', cursive;
+  margin-bottom: 10px;
 }
 
 .video-content p {
   font-family: 'Magnolia Script', cursive;
-    font-size: 1.8rem;
-    margin-top: 15px;
-    line-height: 1.6;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-container {
+    height: auto;  /* Ensures the container expands as needed */
+    padding: 10% 0; /* Adds padding for spacing */
+  }
+
+  .video-content {
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .video-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .video-content p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+/* 🔹 Product Section Background */
+.product-bg {
+  width: 100%;
+  height: auto; /* Ensures it doesn't cut off content */
+  padding: 0 5%;
+}
+
+/* 🔹 Flip Card Styling */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner flip container */
+.flip-card-inner {
+  width: 60%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* Front & Back sides */
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Front Side (Image) */
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Back Side (Hidden Content) */
+.flip-card-back {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: justify;
+  transform: rotateY(180deg);
+}
+
+/* Flip Effect on Hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 992px) {
+  .products h2 {
+      font-size: 1.5rem;
+  }
+
+  .products h3 {
+      font-size: 1rem;
+      text-align: justify;
+      padding: 5%;
+  }
 }
 
 @media (max-width: 768px) {
-.video-content{
-    text-align: justify;
-}
-}
-.product-bg{
-    /* background-image: url('abstract-uv-ultraviolet-light-composition.jpg'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    background-attachment: fixed; */
-    width: 100%;
-    height: 100vh;
-}
-    
+  .product-bg {
+      min-height: auto;
+      padding-bottom: 50px;
+  }
 
-/* Flip Card Container */
-.flip-card {
-    perspective: 1000px;
-    width: 100%;
-    height: 300px;
-    position: relative;
+  .flip-card {
+      height: 250px;
+      width: 100%;
+  }
+
+  .flip-card p {
+      font-size: 1rem;
+  }
+
+  .btn {
+      font-size: 1rem;
+  }
+  .container2{
+    padding: 0%;
+  }
+}
+.container2{
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+  .col-md-4 {
     display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers button horizontally */
     justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  /* ✅ Make entire section responsive */
+.client-scrolling-container {
+  width: 100%;
+ height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* Light background */
+ 
+}
+
+
+
+.client-description h2 {
+  font-size: 2rem;
+  font-family: 'Magnolia Script', cursive;
+  padding: 0 10%;
+  text-align: center;
+  color: #000000;
+}
+/* ✅ Scrolling Section */
+.scrolling-client-details {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.scrolling-content {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scrollLeft 20s linear infinite; /* Reduced speed for better visibility */
+}
+
+/* ✅ Client Card */
+.client-container {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 230px;
+  margin: 0 10px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.client-container:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* ✅ Client Logo */
+.client-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ✅ Client Text */
+.client-container h5 {
+  margin-top: 10px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.client-container p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #000000;
+  white-space: normal;
+  word-wrap: break-word;
+  /* padding-left: 8%;
+  padding-right: 8%; */
+  font-family: 'Magnolia Script', cursive;
+}
+
+/* ✅ Scrolling Animation */
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
   }
-  
-  /* Inner container for front and back */
-  .flip-card-inner {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
+  to {
+    transform: translateX(-50%);
   }
-  
-  /* Front and Back Sides */
-  .flip-card-front, .flip-card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    overflow: hidden;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 992px) {
+  .client-description p {
+    font-size: 1rem;
+   
   }
-  
-  /* Front Side (Image) */
-  .flip-card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .client-scrolling-container {
+    min-height: auto;
+    padding-bottom: 40px;
   }
-  
-  /* Back Side (Hidden Content) */
-  .flip-card-back {
-    background:black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    transform: rotateY(180deg);
-  }
-  
-  /* Flip Effect on Hover */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .products h2 {
-      font-size: 2.5vh;
-    }
-    .products h3 {
-      text-align: justify;
-      font-size: 2.1vh;
-    }
-    .products, .flip-card-back {
-      font-size: 2vh;
-    }
-    .button1 {
-      margin-bottom: 10px;
-    }
-    .product-bg{
-height: auto;
-    }
-  }
-  
 
   .scrolling-client-details {
-    width: 90%;
-    overflow: hidden;
-    position: relative;
-    white-space: nowrap;
-    margin: auto;
+    width: 100%;
   }
 
   .scrolling-content {
-    display: flex;
-    flex-wrap: nowrap;
-    animation: scrollLeft 30s linear infinite;
+    animation: scrollLeft 30s linear infinite; /* Slower for smaller screens */
   }
- 
+
   .client-container {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 350px;
-    height: 240px;
-    margin: 0 15px;
-    padding: 20px;
-background-color: gray;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    text-align: center;
-    box-sizing: border-box;
+    width: 250px;
+    height: 200px;
+    margin: 0 8px;
+  }
+
+  .client-container h5 ,.client-description h2{
+    font-size: 1rem;
+  }
+
+  .client-container p  {
+    font-size: 0.9rem;
+  }
+}
+/* ✅ Text Styling */
+.client-description p {
+  font-size: 1.8rem;
+  font-family: 'Aprila', serif;
+  
+  text-align: justify;
+  color: #000000;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media (max-width: 480px) {
+  .client-description p {
+    font-size: 1.5rem;
+    font-family: 'Magnolia Script', cursive;
   }
 
   .client-logo img {
-    width: 100px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 25px;
+    width: 60px;
+    height: 60px;
   }
-  .client-scrolling-container {
-    /* background-image: url('abstract-uv-ultraviolet-light-composition.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
-    width: 100vw; 
-    height: 100vh; 
 
-    display: flex;  
-    justify-content: center; 
-     
+  .client-container {
+    width: 220px;
+    height: 180px;
+  }
+
+  .client-container h5,.client-description h2 {
+    font-size: 1.5rem;
+  }
+
+  .client-container p,.client-description p {
+    font-size: 1rem;
+  }
 }
+
+/* ✅ Responsive section styling */
+.founders {
+  text-align: center;
+  padding-left: 7%;
+  padding-right: 8%;
+  padding-bottom: 10%;
+}
+
+/* ✅ Title Styling */
+.section-title {
+  margin-bottom: 40px;
+}
+
+/* ✅ Team Member Card */
+.team-member {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 320px; /* Ensures uniform size */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  background-color: #fff;
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); */
+}
+
+/* ✅ Team Member Image */
+.team-member img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ✅ Name & Position */
+.team-member h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+/* ✅ Hover Effect */
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+/* ✅ Social Media Icons */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 5px;
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.instagram-link {
+  color: #E1306C;
+}
+
+.linkedin-link {
+  color: #0077b5;
+}
+
+.social-links a:hover {
+  color: #333;
+}
+
+/* 🔹 Mobile View Adjustments */
 @media (max-width: 768px) {
-
-    .client-scrolling-container {
-    height: auto;
-    }
-    .client-scrolling-container p{
-padding: 0% !important;
-
-    }
-    .scrolling-content{
-        margin-bottom: 5% !important;
-        border-radius: 20px;
-    }
-}
-.client-scrolling-container p{
-    text-align: justify;
-color: black;
-width: 100%;
-padding-left: 20%;
-padding-right: 20%;
-}
-  .client-container h5 {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    white-space: nowrap;
-    color: black;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-
-  .client-container p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: black;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-
-  @keyframes scrollLeft {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-
   .founders {
-    /* background-image: url('abstract-uv-ultraviolet-light-composition.jpg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;*/
-    position: relative;  
-    z-index: 2; 
-    
-}
-
-.team-section {
-    padding: 60px 0;
-    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
   }
-  
-  .section-title {
-    margin-bottom: 40px;
-  }
-  
-  .team-member {
-    /* background: black; */
-    border-radius: 8px;
-    
-    padding: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  @media (max-width: 981px) {
-    .team-member{
-      margin-bottom: 20px;
-    }  
-  }
- 
 
   .team-member img {
-    border-radius: 50%;
-    margin-bottom: 15px;
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
+    width: 180px;
+    height: 180px;
   }
-  
+
   .team-member h4 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: white;
+    font-size: 1.3rem;
   }
-  
+
   .team-member p {
-    font-size: 14px;
-    color: white;
+    font-size: 1rem;
   }
-  
-  .team-member:hover {
-    transform: translateY(-10px);
-  }
-  
-  .social-links {
-    margin-top: 10px;
-  }
-  
+
   .social-links a {
-    margin: 0 5px;
     font-size: 20px;
-    color: #777;
-    transition: color 0.3s ease;
   }
-  
-  .social-links a:hover {
-    color: #0077b5; /* LinkedIn blue color */
+}
+
+@media (max-width: 576px) {
+  .team-member {
+    max-width: 280px;
   }
-  
-  
-  .instagram-link {
-    /* color:; Instagram pink color */
-    font-size: 24px; /* Adjust icon size */
-    transition: color 0.3s ease;
+
+  .team-member img {
+    width: 160px;
+    height: 160px;
   }
-  
+}
+
 
   /* Contact Section Styling */
 .contact-us {
