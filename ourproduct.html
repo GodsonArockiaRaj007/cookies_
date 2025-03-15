@@ -53,8 +53,8 @@
         /* Flip Card Container */
         .flip-card {
     perspective: 1000px;
-    width: 80%; /* Reduce width to make it smaller */
-    height: 250px; /* Reduced height */
+    width: 100%; /* Reduce width to make it smaller */
+    height: 350px; /* Reduced height */
     position: relative;
     display: flex;
     justify-content: center;
@@ -74,11 +74,12 @@
         }
 
         .flip-card-front, .flip-card-back {
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            height: 80%;
             position: absolute;
             backface-visibility: hidden;
             display: flex;
+           
             justify-content: center;
             align-items: center;
             border-radius: 10px;
@@ -123,11 +124,9 @@
                 height: auto;
             }
         }
-        .flip-card {
-    width: 75%; /* Increased width */
-    height: 220px; /* Reduce height slightly */
-    margin-bottom: 5px; /* Reduce space between rows */
-}
+       .fullproduct{
+        padding-left: 5.5%;
+       }
 
     </style>
 </head>
@@ -137,7 +136,7 @@
     <div class="details-container">
         <div class="details-wrapper">
             <h1>Our Products</h1>
-            <h2 class="text-left">About Our Products</h2>
+            <h2 class="text-start">About Our Products</h2>
 
             <div class="product-description">
                 <h3>Planora - Event Management App</h3>
@@ -165,8 +164,8 @@
             </h3>
         </div>
 
-        <div class="container mt-5">
-            <div class="row text-center g-0 no-gutters"> <!-- g-0 removes Bootstrap spacing -->
+        <div class="container mt-5 fullproduct">
+            <div class="row text-center "> <!-- g-0 removes Bootstrap spacing -->
         
                 <!-- Product 1 -->
                 <div class="col-md-4" data-aos="fade-right">
@@ -181,7 +180,7 @@
                         </div>
                     </div>
                     <a href="https://play.google.com/store/search?q=planora&c=apps&hl=en_IN">
-                        <button class="btn button1 mt-3" style="background-color: black; color: white;">DOWNLOAD</button>
+                        <button class="btn button1 " style="background-color: black; color: white; margin-right: 20%;">DOWNLOAD</button>
                     </a>
                 </div>
 
@@ -197,7 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn button1 mt-3" style="background-color: black; color: white;">DOWNLOAD</button>
+                    <button class="btn button1 " style="background-color: black; color: white; margin-right: 20%;">DOWNLOAD</button>
                 </div>
 
                 <!-- Product 3 -->
@@ -212,7 +211,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn mt-3" style="background-color: black; color: white;">DOWNLOAD</button>
+                    <button class="btn button1" style="background-color: black; color: white; margin-right: 20%;">DOWNLOAD</button>
                 </div>
             </div>
         </div>
