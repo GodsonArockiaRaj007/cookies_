@@ -54,8 +54,8 @@ html, body {
 .menu {
     display: flex;
     
-    gap:45px;
-    margin-right: 15% !important;
+    gap:35px;
+    /* margin-right: 5% !important; */
 }
 
 .menu-item {
@@ -74,7 +74,7 @@ html, body {
 .contact-us1 img {
     height: 40px;
     position: relative;
-    left: -250px;
+    left: -150px;
 }
 
 .container1, .video-container, .product-bg {
@@ -101,13 +101,18 @@ html, body {
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgb(0, 0, 0);
         width: 100%;
         text-align: center;
-        padding: 10px 0;
+        padding: 0px 0;
     }
     .logo img {
 margin-left: 10px;
+width: 100px;
+height: auto;
+    }
+    .navbar{
+      height: 87px;
     }
 
     .menu.show-menu {
@@ -252,12 +257,12 @@ margin-left: 10px;
 .video-content h1 {
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'Magnolia Script', cursive;
+  font-family: 'Aprila', serif;
   margin-bottom: 10px;
 }
 
 .video-content p {
-  font-family: 'Magnolia Script', cursive;
+  font-family: 'Aprila', serif;
   font-size: 1.5rem;
   line-height: 1.6;
   text-align: justify;
@@ -419,17 +424,21 @@ margin-left: 10px;
 /* ✅ Scrolling Section */
 .scrolling-client-details {
   width: 80%;
+  
   overflow: hidden;
   position: relative;
   white-space: nowrap;
   margin: auto;
   padding: 20px 0;
+ 
 }
 
 .scrolling-content {
+  
   display: flex;
   flex-wrap: nowrap;
   animation: scrollLeft 20s linear infinite; /* Reduced speed for better visibility */
+  
 }
 
 /* ✅ Client Card */
@@ -439,8 +448,8 @@ margin-left: 10px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 280px;
-  height: 230px;
+  width: 350px;
+  height: 400px;
   margin: 0 10px;
   padding: 15px;
   border-radius: 10px;
@@ -455,8 +464,8 @@ margin-left: 10px;
 
 /* ✅ Client Logo */
 .client-logo img {
-  width: 80px;
-  height: 80px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -466,7 +475,7 @@ margin-left: 10px;
   margin-top: 10px;
   font-size: 1.7rem;
   font-weight: bold;
-  color: #000000;
+  color: red;
 }
 
 .client-container p {
@@ -744,4 +753,482 @@ margin-left: 10px;
     .social-icon {
         margin: 0 8px; /* Adjust spacing */
     }
+}
+/* Default Styles */
+.slide-bg {
+  width: 100%;
+  background: red;
+  height: 100vh;
+}
+
+.slide-bg h1 {
+  padding-top: 2%;
+  text-align: center;
+}
+
+/* Slideshow Section */
+.slideshow-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slideshow-container {
+  padding-top: 3%;
+ 
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  overflow: hidden;
+  border-radius: 10px;
+  height: auto; /* Make height responsive */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  cursor: grab;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row; /* Default: Image on Right */
+  align-items: center;
+  user-select: none;
+}
+
+.text-content {
+  width: 50%;
+  background: red;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-family: 'Aprila', serif;
+}
+
+.text-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-family: 'Aprila', serif;
+}
+
+.text-content .btn {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.image-content {
+  width: 50%;
+  height: auto;
+}
+
+.image-content img {
+  width: 100%;
+  max-width: 90%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 30px;
+  margin-left: 5%;
+}
+
+/* Mobile View: Stack Image on Top */
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column; /* Stack elements */
+    align-items: center;
+    text-align: center;
+  }
+  .slide-bg{
+    height: auto;
+  }
+
+  .image-content {
+    
+    width: 100%;
+    height: auto;
+    order: -1; /* Move image to the top */
+  }
+  .image-content img {
+  height: auto;
+  }
+
+  .text-content {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    height: auto; /* Ensure content fits dynamically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 1; /* Ensure text is below */
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .slideshow-container {
+    height: auto; /* Let content define height */
+  }
+}
+
+
+
+.feature {
+  padding: 20px;
+  /* padding-bottom: 5px; */
+  background-color: #ffffff;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+.ourservice-bg{
+  padding-left: 5%;
+}
+.feature h3 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+  font-family: 'Aprila', serif;
+}
+
+.feature p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Aprila', serif;
+  color: white;
+}
+.spacer {
+  height: 50px;
+}
+.features {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+gap: 30px;
+width: 100%;
+
+align-items: center;
+text-align: center;
+padding: 50px;
+/* background-color: rgba(255, 255, 255, 0.8); */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+.features {
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row for tablets */
+}
+}
+
+@media (max-width: 600px) {
+.features {
+    grid-template-columns: repeat(1, 1fr); /* 1 image per row for mobile */
+}
+}
+
+.feature {
+position: relative;
+overflow: hidden;
+border-radius: 8px;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+.feature:hover {
+transform: scale(1.05);
+}
+
+/* Image Wrapper - Fixes Image Size */
+.image-wrapper {
+position: relative;
+width: 80%;
+height: 350px; /* Set uniform image height */
+overflow: hidden;
+border-radius: 8px;
+}
+
+
+.image-wrapper img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ensures all images are the same size */
+transition: transform 0.3s ease;
+}
+
+/* Small text under the image - Always Visible */
+.small-text {
+font-size: 1.5rem;
+font-weight: bold;
+padding: 10px;
+border-radius: 5px;
+font-family: 'Aprila', serif;
+width: 80%;
+/* margin-top: 10px; */
+}
+
+/* Overlay (Hidden Content) */
+.overlay1
+{
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+height: 100%;
+background:#ff0000d1;
+color: white;
+padding: 20px;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+transition: top 0.4s ease-in-out;
+}
+.overlay1 h3{
+color: white;
+font-family: 'Aprila', serif;
+font-size: 2.5rem;
+}
+.overlay1 p{
+color: white;
+font-size: 1.5rem;
+font-family: 'Aprila', serif;
+}
+/* On Hover - Slide Hidden Content Up */
+.image-wrapper:hover .overlay1 {
+top: 0;
+}
+
+
+.small-text p{
+color: black;
+font-family: 'Aprila', serif;
+font-size: 2rem;
+}
+@media (max-width: 768px) {
+.image-wrapper {
+  width: 100%;
+  height: auto; /* Set a fixed height for consistency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featureshead{
+font-size: 2.5vh;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images are uniform and well-fitted */
+}
+}
+
+@media (max-width: 768px) {
+.overlay1 {
+padding: 10px;
+font-size: 0.9rem;
+}
+
+.overlay1 h3 {
+font-size: 2.5vh; /* Adjust heading size */
+}
+
+.overlay1 p {
+font-size: 2vh; /* Reduce paragraph size for clarity */
+font-weight: bold;
+}
+}
+
+@media (max-width: 768px) {
+.features {
+width: 90%; /* Increase width on mobile */
+max-width: 100%; /* Allow it to expand fully */
+padding: 20px; /* Reduce padding to fit more content */
+}
+}
+@media (max-width: 768px) {
+.features {
+width: 100%; /* Full width on mobile */
+padding: 20px; /* Keep some spacing */
+}
+}
+@media (max-width: 768px) {
+.feature {
+width: 90%; /* Make each item wider */
+margin: 0 auto; /* Center the items */
+}
+.small-text{
+  width: 100%;
+}
+}
+
+
+
+
+/* product */
+
+.slideshow-container1 {
+  width: 100%;
+  max-width: 1800px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.slide1.active1 {
+  opacity: 1;
+}
+
+.image-content1 {
+  width: 40%;
+  
+  transform: translateY(100px);
+  transition: transform 1s ease-in-out;
+}
+
+.slide1.active1 .image-content1 {
+  transform: translateY(0);
+}
+
+.image-content1 img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  height: 400px;
+  
+}
+
+.text-content1 {
+  width: 50%;
+  padding: 30px;
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Aprila', serif;
+  transform: translateX(100px);
+  transition: transform 1s ease-in-out;
+}
+
+.slide1.active1 .text-content1 {
+  transform: translateX(0);
+}
+
+.text-content1 h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-family: 'Aprila', serif;
+}
+
+.text-content1 p {
+  
+  font-size: 1.5rem;
+  font-family: 'Aprila', serif;
+}
+
+/* Navigation Dots */
+.dots1 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot1 {
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot1.active1 {
+  background: black;
+}
+
+/* Arrow Buttons */
+.prev1, .next1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.prev1:hover, .next1:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev1{
+  left: 10px;
+}
+
+.next1 {
+  right: 10px;
+}
+@media screen and (max-width: 768px) {
+  .slide1 {
+      flex-direction: column; /* Stack image and text vertically */
+      text-align: center;
+  }
+
+  .image-content1 {
+      width: 100%; /* Make image take full width */
+      transform: translateY(0); /* Remove animation offset */
+  }
+
+  .image-content1 img {
+      width: 100%;
+      height: 250px; /* Maintain aspect ratio */
+  }
+
+  .text-content1 {
+      width: 100%; /* Make text take full width */
+      padding: 20px;
+      transform: translateX(0); /* Remove animation offset */
+  }
 }
